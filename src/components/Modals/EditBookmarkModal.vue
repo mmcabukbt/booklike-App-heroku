@@ -37,7 +37,7 @@ const saveData = () => {
 	<div class="modal-mask modal">
 		<div class="modal-wrapper">
 			<div class="modal-container">
-				<div class="text-3xl text-center mb-10">Bookmarkınızı Düzenleyin</div>
+				<div class="text-3xl text-center mb-10">Bookmarkınızı düzenleyin</div>
 				<form @submit.prevent="saveData" class="flex flex-col">
 					<input
 						type="text"
