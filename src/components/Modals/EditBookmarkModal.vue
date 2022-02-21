@@ -2,9 +2,9 @@
 import { inject } from 'vue';
 import { useStore } from 'vuex';
 
-const AppAxios = inject('AppAxios');
 const { state, getters, commit } = useStore();
-
+const AppAxios = inject('AppAxios');
+const socket = inject('socket');
 const userData = {
 	title: getters.getEditingBookmark_.title,
 	url: getters.getEditingBookmark_.url,
@@ -26,6 +26,7 @@ const saveData = () => {
 			users: state.user,
 			categories: state.categories[userData.categoriesId]
 		}
+		socket.emit("BM_EDITED", editedItem);
 		commit("EDIT_BOOKMARKITEM", editedItem);
 	});
 	commit('CLOSE_EDITBOOKMARK_MODAL')
