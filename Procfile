@@ -1,0 +1,1 @@
+web: node vuevserver.js -p $PORT

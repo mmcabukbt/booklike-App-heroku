@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	.layout {
+		@apply relative;
+		@apply top-16;
+		height: calc(100vh - 60px);
+	}
+	.content {
+		@apply absolute;
+		@apply left-56;
+	}
+}
+
+@layer components {
+	.header-container {
+		@apply !z-[99];
+		@apply select-none;
+		@apply fixed;
+		@apply flex;
+		@apply h-16;
+		@apply w-full;
+		@apply items-center;
+		@apply justify-center;
+		@apply border-b-2;
+		@apply border-gray-200;
+		@apply bg-white;
+  }
+	.menu-item {
+		@apply flex;
+		@apply p-2;
+		@apply rounded-md;
+		@apply hover:bg-slate-700;
+		@apply hover:text-white;
+  }
+	.usermenu-item {
+		@apply flex;
+		@apply p-2;
+		@apply rounded-md;
+		@apply hover:bg-rose-700;
+		@apply hover:text-white;
+  }
+	.topmenu-item {
+		@apply flex;
+		@apply flex-col;
+		@apply text-xs;
+		@apply justify-end;
+		@apply items-center;
+		@apply w-28;
+		@apply p-2;
+		@apply rounded-md;
+		@apply hover:bg-slate-700;
+		@apply hover:text-white;		  
+  }
+	.sidebar {
+		@apply !z-30;
+		@apply select-none;
+		@apply fixed;
+		@apply flex;
+		@apply flex-shrink-0;
+		@apply flex-col;
+		@apply w-56;
+		@apply h-full;
+		@apply border-r;
+		@apply border-gray-300;
+		@apply bg-white;
+  }
+	.sidebar-item {
+		@apply flex;
+		@apply px-2;
+		@apply py-3;
+		@apply text-gray-700;
+		@apply hover:bg-slate-700;
+		@apply hover:text-white;
+  }
+	.like-btn {
+		@apply flex;
+		@apply flex-shrink-0;
+		@apply h-10;
+		@apply w-10;
+		@apply p-2;
+		@apply items-center;
+		@apply justify-center;
+		@apply rounded-md;
+		@apply hover:bg-indigo-500;
+  }
+	.bookmark-btn {
+		@apply flex;
+		@apply flex-shrink-0;
+		@apply h-10;
+		@apply w-10;
+		@apply p-2;
+		@apply items-center;
+		@apply justify-center;
+		@apply rounded-md;
+		@apply hover:bg-red-500;
+  }
+	.details-btn {
+		@apply flex;
+		@apply flex-shrink-0;
+		@apply h-10;
+		@apply w-10;
+		@apply p-2;
+		@apply items-center;
+		@apply justify-center;
+		@apply rounded-md;
+		@apply hover:bg-gray-200;
+		@apply group-focus-within:bg-cyan-100;
+  }
+	.details-container {
+		@apply invisible;
+		@apply absolute;
+		@apply right-0;
+		@apply top-full;
+		@apply !z-50;
+		@apply h-40;
+		@apply w-60;
+		@apply p-2;
+		@apply overflow-y-scroll;
+		@apply rounded-md;
+		@apply border;
+		@apply text-left;
+		@apply text-sm;
+		@apply items-center;
+		@apply justify-center;
+		@apply rounded-md;
+		@apply bg-white;
+		@apply shadow-lg;
+		@apply group-hover:visible;
+		@apply group-focus-within:visible;
+  }
+		.input {
+		@apply px-3;
+		@apply py-2;
+		@apply rounded;
+		@apply border;
+		@apply border-gray-300;
+		@apply outline-none;
+		@apply hover:border-gray-400;
+		@apply focus:border-black;
+	}
+		.default-button {
+		@apply p-2;
+		@apply rounded;
+		@apply text-white;
+		@apply bg-slate-800;
+		@apply hover:bg-slate-900;
+		@apply focus:bg-slate-900;
+		@apply active:bg-black;
+		@apply hover:shadow-md;
+	}
+		.secondary-button {
+		@apply p-2;
+		@apply rounded;
+		@apply text-white;
+		@apply bg-gray-700;
+		@apply hover:bg-gray-800;
+		@apply focus:bg-gray-800;
+		@apply active:bg-gray-900;
+		@apply hover:shadow-md;
+	}
+	.login_register_container {
+	@apply absolute;
+	@apply flex;
+	@apply flex-col;
+	@apply w-96;
+	@apply top-1/2;
+	@apply left-1/2;
+	@apply m-auto;
+	@apply p-3;
+	@apply border;
+	@apply border-gray-300;
+	@apply rounded-md ;
+	@apply bg-white;
+	@apply shadow-md;
+	@apply -translate-y-1/2;
+	@apply -translate-x-1/2;
+}
+	.new_bl_container {
+	@apply flex;
+	@apply flex-col;
+	@apply w-[500px];
+	@apply m-auto;
+	@apply p-5;
+	@apply border;
+	@apply border-gray-300;
+	@apply rounded-md ;
+	@apply bg-white;
+	@apply shadow-md;
+	@apply translate-y-1/4;
+	@apply -translate-x-1/4;
+}
+	
+}
+
+@layer utilities {
+	.side-active {
+		@apply text-white;
+		@apply bg-slate-600;
+	}
+	.like-active {
+		@apply text-indigo-900;
+		@apply bg-indigo-200;
+  }
+  .bookmark-active {
+		@apply text-red-900;
+		@apply bg-red-200;
+  }
+		.radio:checked+label{
+		@apply text-white;
+		@apply bg-slate-600;
+		@apply hover:bg-slate-700;
+	}
+	.topmenu-active {
+		@apply border-gray-900;
+		@apply border-t-8;
+		@apply text-white;
+		@apply bg-indigo-400;
+	}
+}
+.radio {
+	display: none;
+}
+/* .radio:checked +label{
+background-color: rgb(71,85,105);
+color:white
+} */
